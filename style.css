@@ -1,7 +1,7 @@
 body {
      font-family: Arial,sans-serif;
      color: #333;
-     background-color: #f4f6f9;
+     background-color: #ebeff4;
      margin: 0;
      padding: 0;
      line-height: 1.6;
@@ -28,7 +28,6 @@ nav a:hover{
 }
 .card,
 .car,
-.price-box,
 .form-container{
     background-color: white;
     padding: 25px;
@@ -44,36 +43,38 @@ main{
     margin: 0 auto;
 }
 footer{
+    clear:both;
+    display: block;
+    width: 100%;
     background-color: #0b1f3a;
     color: #c0c0c0;
     text-align: center;
     padding: 10px;
+    margin-top: 50px;
 }
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgb(0, 0, 0, 0.12);
+
+.row{
+    margin: 8px -16px;
 }
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+.row > .column{
+    padding: 8px;
 }
-.gallery img{
-    width: 220px;
-    height: auto;
-    border-radius: 8px;
-    transition: 0.3s;
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
-.gallery img:hover{
-    transform: scale(1.05);
+.content{
+    background-color: white;
+    padding: 10px;
 }
-button{
+button:hover{
     background-color: #0b1f3a;
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
-    transition: 0.3;
+    transition: 0.5s;
 }
 input,
 select,
@@ -108,5 +109,57 @@ text-align: center;
 padding: 8px;
 }
 tr:nth-child(even){background-color: #9a7070;}
+
+*{
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    width: 33.3%;
+    padding: 8px
+}
+.price{
+    list-style-type: none;
+    border: 1px solid #302d2d;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+}
+.price .header {
+    background-color: #0b1f3a;
+    color: #c0c0c0;
+    font-size: 25px;
+}
+.price li {
+    border-bottom: 1px solid #bcb6b6;
+    padding: 20px;
+    text-align: center;
+}
+.price .grey{
+    background-color: #bcb6b6;
+    font-size: 20px;
+}
+.button:hover {
+    background-color: #0b1f3a;
+    border: none;
+    color: #ccc;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+@media only screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+    
+
 
 
