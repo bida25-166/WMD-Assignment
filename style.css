@@ -102,13 +102,15 @@ main a[href^="mailto:"] {
 }
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 70%;
+  margin: 20px auto;
 }
-th, td{
+table, th, td{
 text-align: center;
 padding: 8px;
+border: 1px solid #444
 }
-tr:nth-child(even){background-color: #9a7070;}
+tr:nth-child(even){background-color: #a69f9f;}
 
 *{
     box-sizing: border-box;
